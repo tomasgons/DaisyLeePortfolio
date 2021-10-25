@@ -1,0 +1,309 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+  color: #ffffff;
+
+  background-image: url(pics/wallpaper.jpg);
+  background-repeat: repeat;
+}
+
+header {
+  color: white;
+  font-size: 130%;
+  padding: 40px 15px;
+  text-align: center;
+}
+header h1 {
+  margin: 10px;
+}
+
+header .toggle {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+  font-size: 25px;
+  color: rgba(247, 247, 247, 0.935);
+
+  opacity: 0.6;
+
+  top: 2rem;
+  left: 1rem;
+
+  border: none;
+  position: absolute;
+  padding: 0;
+}
+
+#toggle {
+  position: fixed;
+}
+
+header h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 200%;
+  color: rgba(80, 4, 4, 0.935);
+}
+nav {
+  grid-area: navbar;
+
+  background: no-repeat 5px 0px;
+  background-color: rgba(80, 4, 4, 0.3);
+
+  color: rgba(133, 34, 34, 0.584);
+  font-size: 120%;
+  position: sticky;
+  top: 50px;
+}
+
+.nav-closed {
+  z-index: -10;
+  -webkit-transform: translateX(-120%);
+  transform: translateX(-120%);
+}
+
+.nav {
+  z-index: 100;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.close-nav-btn {
+  background-color: transparent;
+  font-size: 25px;
+  position: absolute;
+  color: rgba(247, 247, 247, 0.935);
+  top: 0;
+  right: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* img {
+  max-width: 90%;
+  height: auto;
+} */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: rgba(249, 233, 233);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: red;
+  transition: 100ms;
+}
+
+.wrapper {
+  display: grid;
+  gap: 20px;
+
+  margin: 0 auto;
+  max-width: 100%;
+  width: 900px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "navbar navbar navbar"
+    ".  video ."
+    "costumes costumes costumes"
+    "headpieces headpieces headpieces"
+    "repairs repairs repairs"
+    "events events events"
+    "lessons lessons lessons"
+    "upholstery upholstery upholstery"
+    "about about about"
+    "footer  footer  footer";
+
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-content: center;
+}
+
+#headpieces {
+  grid-area: headpieces;
+  text-align: center;
+  justify-self: center;
+  margin-top: 50px;
+}
+#headpieces h1 {
+  font-size: 200%;
+  color: rgba(247, 247, 247, 0.935);
+  text-align: center;
+}
+#headpieces img {
+  justify-self: center;
+
+  margin: 10px;
+}
+
+#costumes {
+  grid-area: costumes;
+  justify-self: center;
+  margin-top: 80px;
+  padding: 10px;
+  text-align: center;
+}
+
+#costumes h1 {
+  font-size: 200%;
+  color: rgba(247, 247, 247, 0.935);
+  text-align: center;
+}
+
+#costumes img {
+  margin: 10px;
+}
+#repairs {
+  grid-area: repairs;
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+}
+#repairs h1 {
+  font-size: 200%;
+  color: rgba(247, 247, 247, 0.935);
+  text-align: center;
+}
+#repairs img {
+  margin: 10px;
+}
+
+#events {
+  grid-area: events;
+  margin-top: 80px;
+  padding: 10px;
+  text-align: center;
+}
+#events h1 {
+  font-size: 200%;
+  color: rgba(247, 247, 247, 0.935);
+  text-align: center;
+}
+#events img {
+  margin: 20px;
+}
+
+#lessons {
+  grid-area: lessons;
+  text-align: center;
+  justify-self: center;
+  margin-top: 50px;
+  padding: 10px;
+}
+#lessons h1 {
+  font-size: 200%;
+  color: rgba(247, 247, 247, 0.935);
+  text-align: center;
+}
+#lessons img {
+  justify-self: center;
+
+  margin: 20px;
+}
+
+#upholstery {
+  grid-area: upholstery;
+  text-align: center;
+  justify-self: center;
+  margin-top: 50px;
+}
+#upholstery h1 {
+  font-size: 200%;
+  color: rgba(247, 247, 247, 0.935);
+  text-align: center;
+}
+#upholstery img {
+  justify-self: center;
+
+  margin: 20px;
+}
+
+#about {
+  display: grid;
+  grid-area: about;
+
+  margin: 50px;
+  width: 90%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  justify-self: center;
+  justify-content: center;
+}
+#about h1 {
+  font-size: 200%;
+  color: rgba(247, 247, 247, 0.935);
+}
+.video {
+  grid-area: video;
+  margin: 50px;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 5px;
+  margin-top: 70px;
+  margin-bottom: 0px;
+  text-align: center;
+  background-color: rgba(110, 4, 4, 0.935);
+}
+.left {
+  border: 10px solid #261112;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    display: grid;
+    max-width: 600px;
+    gap: 20px;
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header "
+      "navbar "
+      "  video "
+      "costumes "
+      "headpieces "
+      "repairs "
+      "events "
+      "lessons "
+      "upholstery u"
+      "about "
+      "footer  ";
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  header .toggle {
+    right: 1rem;
+  }
+}
