@@ -18,8 +18,13 @@ body {
   background-image: url(pics/wallpaper.jpg);
   background-repeat: repeat;
 }
+img {
+  max-width: 80%;
+  height: auto;
+}
 
 header {
+  grid-area: header;
   color: white;
   font-size: 130%;
   padding: 40px 15px;
@@ -58,6 +63,7 @@ header h1 {
 }
 nav {
   grid-area: navbar;
+  max-width: 100%;
 
   background: no-repeat 5px 0px;
   background-color: rgba(80, 4, 4, 0.3);
@@ -92,10 +98,6 @@ nav {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* img {
-  max-width: 90%;
-  height: auto;
-} */
 
 ul {
   list-style-type: none;
@@ -123,45 +125,24 @@ li a:hover {
 
 .wrapper {
   display: grid;
-  gap: 20px;
-
+  width: 90%;
   margin: 0 auto;
-  max-width: 100%;
-  width: 900px;
-  grid-template-columns: 1fr 1fr 1fr;
+
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "header header header"
-    "navbar navbar navbar"
-    ".  video ."
-    "costumes costumes costumes"
-    "headpieces headpieces headpieces"
-    "repairs repairs repairs"
-    "events events events"
-    "lessons lessons lessons"
-    "upholstery upholstery upholstery"
-    "about about about"
-    "footer  footer  footer";
+    "header "
+    "navbar "
+    "costumes "
+    "headpieces "
+    "repairs "
+    "events "
+    "lessons "
+    "upholstery"
+    "about "
+    "footer ";
 
-  padding-left: 30px;
-  padding-right: 30px;
-  justify-content: center;
-}
-
-#headpieces {
-  grid-area: headpieces;
-  text-align: center;
-  justify-self: center;
-  margin-top: 50px;
-}
-#headpieces h1 {
-  font-size: 200%;
-  color: rgba(247, 247, 247, 0.935);
-  text-align: center;
-}
-#headpieces img {
-  justify-self: center;
-
-  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #costumes {
@@ -181,6 +162,23 @@ li a:hover {
 #costumes img {
   margin: 10px;
 }
+
+#headpieces {
+  grid-area: headpieces;
+  text-align: center;
+  justify-self: center;
+  margin-top: 50px;
+}
+#headpieces h1 {
+  font-size: 200%;
+  color: rgba(247, 247, 247, 0.935);
+  text-align: center;
+}
+#headpieces img {
+  justify-self: center;
+  margin: 10px;
+}
+
 #repairs {
   grid-area: repairs;
   text-align: center;
@@ -193,6 +191,7 @@ li a:hover {
   text-align: center;
 }
 #repairs img {
+  justify-self: center;
   margin: 10px;
 }
 
@@ -208,6 +207,7 @@ li a:hover {
   text-align: center;
 }
 #events img {
+  justify-self: center;
   margin: 20px;
 }
 
@@ -225,7 +225,6 @@ li a:hover {
 }
 #lessons img {
   justify-self: center;
-
   margin: 20px;
 }
 
@@ -242,16 +241,14 @@ li a:hover {
 }
 #upholstery img {
   justify-self: center;
-
   margin: 20px;
 }
 
 #about {
-  display: grid;
   grid-area: about;
 
-  margin: 50px;
-  width: 90%;
+  max-width: 90%;
+
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -262,45 +259,52 @@ li a:hover {
   font-size: 200%;
   color: rgba(247, 247, 247, 0.935);
 }
-.video {
-  grid-area: video;
-  margin: 50px;
-}
 
-.footer {
+footer {
   grid-area: footer;
   padding: 5px;
+  width: 100%;
   margin-top: 70px;
-  margin-bottom: 0px;
+  justify-self: center;
+
   text-align: center;
   background-color: rgba(110, 4, 4, 0.935);
 }
-.left {
-  border: 10px solid #261112;
-}
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 400px) {
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+  img {
+    max-width: 90%;
+    height: auto;
+  }
+
   .wrapper {
     display: grid;
-    max-width: 600px;
     gap: 20px;
 
-    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 900px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "header "
-      "navbar "
-      "  video "
-      "costumes "
-      "headpieces "
-      "repairs "
-      "events "
-      "lessons "
-      "upholstery u"
-      "about "
-      "footer  ";
+      "header header header"
+      "navbar navbar navbar"
+      ".  video ."
+      "costumes costumes costumes"
+      "headpieces headpieces headpieces"
+      "repairs repairs repairs"
+      "events events events"
+      "lessons lessons lessons"
+      "upholstery upholstery upholstery"
+      "about about about"
+      "footer footer footer";
 
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
   }
 
   header .toggle {
