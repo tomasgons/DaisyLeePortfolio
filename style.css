@@ -1,6 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  cursor: url("pics/paistycursor.png"), auto;
 }
 
 html {
@@ -13,11 +14,11 @@ body {
 
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 
-  color: #ffffff;
+  color: whitesmoke;
 
-  background-image: url(pics/wallpaper.jpg);
-  background-repeat: repeat;
+  background-image: url(pics/walpaper2.jpg);
 }
+
 img {
   max-width: 80%;
   height: auto;
@@ -26,12 +27,19 @@ img {
 header {
   grid-area: header;
   color: white;
-  font-size: 130%;
-  padding: 40px 15px;
+
+  padding: 10px 15px;
   text-align: center;
 }
-header h1 {
-  margin: 10px;
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 300%;
+  color: rgba(80, 4, 4, 0.935);
+}
+header p {
+  font-style: italic;
+  font-size: 150%;
 }
 
 header .toggle {
@@ -51,16 +59,23 @@ header .toggle {
   padding: 0;
 }
 
+h2 {
+  font-size: 200%;
+  color: rgba(80, 4, 4, 0.935);
+  text-align: center;
+  font-weight: bold;
+}
+h3 {
+  font-size: 170%;
+  color: rgba(80, 4, 4, 0.935);
+  text-align: center;
+  font-weight: bold;
+}
+
 #toggle {
   position: fixed;
 }
 
-header h1 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 200%;
-  color: rgba(80, 4, 4, 0.935);
-}
 nav {
   grid-area: navbar;
   max-width: 100%;
@@ -132,12 +147,12 @@ li a:hover {
   grid-template-areas:
     "header "
     "navbar "
-    "costumes "
-    "headpieces "
+    "costuming "
     "repairs "
     "events "
     "lessons "
     "upholstery"
+    "musicians"
     "about "
     "footer ";
 
@@ -145,18 +160,23 @@ li a:hover {
   padding-right: 10px;
 }
 
-#costumes {
-  grid-area: costumes;
+#costuming {
+  grid-area: costuming;
   justify-self: center;
-  margin-top: 80px;
+  margin-top: 20px;
   padding: 10px;
   text-align: center;
 }
 
-#costumes h1 {
-  font-size: 200%;
-  color: rgba(247, 247, 247, 0.935);
+#costuming img {
+  margin: 10px;
+}
+
+#costumes {
+  margin-top: 20px;
+  padding: 10px;
   text-align: center;
+  justify-self: center;
 }
 
 #costumes img {
@@ -169,11 +189,7 @@ li a:hover {
   justify-self: center;
   margin-top: 50px;
 }
-#headpieces h1 {
-  font-size: 200%;
-  color: rgba(247, 247, 247, 0.935);
-  text-align: center;
-}
+
 #headpieces img {
   justify-self: center;
   margin: 10px;
@@ -209,6 +225,7 @@ li a:hover {
 #events img {
   justify-self: center;
   margin: 20px;
+  max-width: 300px;
 }
 
 #lessons {
@@ -234,16 +251,36 @@ li a:hover {
   justify-self: center;
   margin-top: 50px;
 }
-#upholstery h1 {
-  font-size: 200%;
-  color: rgba(247, 247, 247, 0.935);
-  text-align: center;
-}
+
 #upholstery img {
+  justify-self: center;
+  margin: 20px;
+  max-width: 300px;
+}
+
+#musicians {
+  grid-area: musicians;
+  text-align: center;
+  justify-self: center;
+  margin-top: 50px;
+}
+
+#musicians img {
   justify-self: center;
   margin: 20px;
 }
 
+#commercial {
+  grid-area: commercial;
+  text-align: center;
+  justify-self: center;
+  margin-top: 50px;
+}
+
+#commercial img {
+  justify-self: center;
+  margin: 20px;
+}
 #about {
   grid-area: about;
 
@@ -254,10 +291,6 @@ li a:hover {
   border-radius: 10px;
   justify-self: center;
   justify-content: center;
-}
-#about h1 {
-  font-size: 200%;
-  color: rgba(247, 247, 247, 0.935);
 }
 
 footer {
@@ -272,10 +305,6 @@ footer {
 }
 
 @media screen and (min-width: 400px) {
-  iframe {
-    max-width: 100%;
-    height: auto;
-  }
   img {
     max-width: 90%;
     height: auto;
@@ -293,12 +322,13 @@ footer {
       "header header header"
       "navbar navbar navbar"
       ".  video ."
-      "costumes costumes costumes"
-      "headpieces headpieces headpieces"
+      "costuming costuming costuming"
       "repairs repairs repairs"
       "events events events"
       "lessons lessons lessons"
       "upholstery upholstery upholstery"
+      "musicians musicians musicians"
+      "commercial commercial commercial"
       "about about about"
       "footer footer footer";
 
