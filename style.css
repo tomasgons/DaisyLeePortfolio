@@ -1,7 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  cursor: url("pics/paistycursor.png"), auto;
+  cursor: pointer;
 }
 
 html {
@@ -153,6 +153,7 @@ li a:hover {
     "lessons "
     "upholstery"
     "musicians"
+    "commercial"
     "about "
     "footer ";
 
@@ -167,11 +168,10 @@ li a:hover {
   padding: 10px;
   text-align: center;
 }
-
 #costuming img {
+  justify-self: center;
   margin: 10px;
 }
-
 #costumes {
   margin-top: 20px;
   padding: 10px;
@@ -179,20 +179,10 @@ li a:hover {
   justify-self: center;
 }
 
-#costumes img {
-  margin: 10px;
-}
-
 #headpieces {
-  grid-area: headpieces;
   text-align: center;
   justify-self: center;
   margin-top: 50px;
-}
-
-#headpieces img {
-  justify-self: center;
-  margin: 10px;
 }
 
 #repairs {
@@ -255,7 +245,7 @@ li a:hover {
 #upholstery img {
   justify-self: center;
   margin: 20px;
-  max-width: 300px;
+  max-width: 70%;
 }
 
 #musicians {
@@ -321,7 +311,6 @@ footer {
     grid-template-areas:
       "header header header"
       "navbar navbar navbar"
-      ".  video ."
       "costuming costuming costuming"
       "repairs repairs repairs"
       "events events events"
