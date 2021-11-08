@@ -1,3 +1,6 @@
+/* Commercial work: goat 
+*/
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -85,8 +88,8 @@ nav {
 
   color: rgba(133, 34, 34, 0.584);
   font-size: 120%;
-  position: sticky;
-  top: 50px;
+  position: fixed;
+  top: 30px;
 }
 
 .nav-closed {
