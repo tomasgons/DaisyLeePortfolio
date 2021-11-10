@@ -180,6 +180,9 @@ li a:hover {
   padding: 10px;
   text-align: center;
 }
+#costuming p {
+  text-align: left;
+}
 
 #costumes {
   margin-top: 20px;
