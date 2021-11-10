@@ -356,14 +356,21 @@ footer {
     right: 1rem;
   }
   .headerimg p {
+    top: 160px;
+    left: 80px;
+  }
+  .aboutcontent img {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .headerimg p {
     position: absolute;
     top: 18vw;
     left: 15vw;
 
     font-size: 30px;
     font-weight: 900;
-  }
-  .aboutcontent img {
-    max-width: 60%;
   }
 }
