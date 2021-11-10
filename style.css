@@ -30,7 +30,7 @@ header {
   width: 80%;
   color: white;
   margin: 0 auto;
-  padding: 10px 15px;
+  padding: 10px 0px;
   text-align: center;
 }
 
@@ -44,8 +44,8 @@ header {
 
 .headerimg p {
   position: absolute;
-  top: 150px;
-  left: 100px;
+  top: 160px;
+  left: 80px;
   font-size: 90%;
   background: url(pics/walpaper2.jpg) -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
