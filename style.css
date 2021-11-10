@@ -44,7 +44,7 @@ header {
 
 .headerimg p {
   position: absolute;
-  top: 155px;
+  top: 160px;
   left: 70px;
   font-size: 90%;
   background: url(pics/walpaper2.jpg) -20px -20px no-repeat;
@@ -55,8 +55,7 @@ header {
 
 h1 {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
+  font-weight: bold;
   font-size: 300%;
   color: rgba(80, 4, 4, 0.935);
 }
@@ -318,7 +317,7 @@ footer {
   background-color: rgba(110, 4, 4, 0.935);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 500px) {
   img {
     max-width: 90%;
     height: auto;
@@ -355,8 +354,8 @@ footer {
   }
   .headerimg p {
     position: absolute;
-    top: 15vw;
-    left: 25vw;
+    top: 18vw;
+    left: 15vw;
 
     font-size: 30px;
     font-weight: 900;
