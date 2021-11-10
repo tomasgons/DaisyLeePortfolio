@@ -284,12 +284,13 @@ li a:hover {
 #about {
   grid-area: about;
   width: 80%;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+
   margin: 0 auto;
 }
 .aboutcontent {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
