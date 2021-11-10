@@ -2,7 +2,7 @@ const toggle = document.querySelector(".toggle")
 const nav = document.querySelector("#nav")
 
 
-const container = document.querySelector(".container")
+const wrapper = document.querySelector(".wrapper")
 const closeNav = document.querySelector("#close-nav")
 
 
@@ -20,6 +20,11 @@ toggle.addEventListener("click", () => {
 
 
 // });
+wrapper.addEventListener("click", (e) =>
+    e.target !== nav ? nav.classList.add("nav-closed") : false
+
+
+);
 
 links.forEach((link) => {
     link.addEventListener("click", () => {

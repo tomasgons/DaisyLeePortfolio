@@ -12,37 +12,51 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
-
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-
   color: whitesmoke;
-
   background-image: url(pics/walpaper2.jpg);
 }
 
 img {
   max-width: 80%;
   height: auto;
+  object-fit: contain;
 }
 
 header {
   grid-area: header;
+  width: 80%;
   color: white;
-
+  margin: 0 auto;
   padding: 10px 15px;
   text-align: center;
 }
+
+.headerimg {
+  text-align: center;
+}
+.headerimg img {
+  text-align: center;
+}
+
+.headerimg p {
+  position: absolute;
+  top: 260px;
+  left: 140px;
+  font-size: 90%;
+  background: url(pics/walpaper2.jpg) -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 h1 {
   text-align: center;
   font-weight: bold;
   font-size: 300%;
   color: rgba(80, 4, 4, 0.935);
-}
-header p {
-  font-style: italic;
-  font-size: 150%;
 }
 
 header .toggle {
@@ -51,12 +65,9 @@ header .toggle {
   background: transparent;
   font-size: 25px;
   color: rgba(247, 247, 247, 0.935);
-
   opacity: 0.6;
-
   top: 2rem;
   left: 1rem;
-
   border: none;
   position: absolute;
   padding: 0;
@@ -82,14 +93,15 @@ h3 {
 nav {
   grid-area: navbar;
   max-width: 100%;
-
+  width: 200px;
+  height: 100vh;
   background: no-repeat 5px 0px;
   background-color: rgba(80, 4, 4, 0.3);
-
   color: rgba(133, 34, 34, 0.584);
   font-size: 120%;
   position: fixed;
   top: 30px;
+  overflow: scroll;
 }
 
 .nav-closed {
@@ -122,6 +134,7 @@ ul {
   margin: 0;
   padding: 20px;
   overflow: hidden;
+  text-align: left;
 }
 
 li {
@@ -131,7 +144,6 @@ li {
 li a {
   display: inline-block;
   color: rgba(249, 233, 233);
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -143,13 +155,11 @@ li a:hover {
 
 .wrapper {
   display: grid;
-  width: 90%;
+  max-width: 80%;
   margin: 0 auto;
 
   grid-template-columns: 1fr;
   grid-template-areas:
-    "header "
-    "navbar "
     "costuming "
     "repairs "
     "events "
@@ -159,33 +169,31 @@ li a:hover {
     "commercial"
     "about "
     "footer ";
-
-  padding-left: 10px;
-  padding-right: 10px;
+  justify-content: center;
 }
 
 #costuming {
   grid-area: costuming;
-  justify-self: center;
+
   margin-top: 20px;
   padding: 10px;
   text-align: center;
 }
-#costuming img {
-  justify-self: center;
-  margin: 10px;
-}
+
 #costumes {
   margin-top: 20px;
-  padding: 10px;
+
   text-align: center;
-  justify-self: center;
 }
 
 #headpieces {
   text-align: center;
-  justify-self: center;
+
   margin-top: 50px;
+}
+#headpieces img {
+  justify-self: center;
+  margin: 10px;
 }
 
 #repairs {
@@ -266,30 +274,36 @@ li a:hover {
 #commercial {
   grid-area: commercial;
   text-align: center;
-  justify-self: center;
+
   margin-top: 50px;
 }
 
 #commercial img {
-  justify-self: center;
   margin: 20px;
 }
 #about {
   grid-area: about;
-
-  max-width: 90%;
-
+  width: 80%;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  justify-self: center;
+  margin: 0 auto;
+}
+.aboutcontent {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+}
+.aboutcontent img {
+  max-width: 80%;
+  padding: 10px;
 }
 
 footer {
   grid-area: footer;
   padding: 5px;
-  width: 100%;
+  width: 80%;
   margin-top: 70px;
   justify-self: center;
 
@@ -297,7 +311,7 @@ footer {
   background-color: rgba(110, 4, 4, 0.935);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 700px) {
   img {
     max-width: 90%;
     height: auto;
@@ -331,5 +345,16 @@ footer {
 
   header .toggle {
     right: 1rem;
+  }
+  .headerimg p {
+    position: absolute;
+    top: 15vw;
+    left: 25vw;
+
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .aboutcontent img {
+    max-width: 60%;
   }
 }
