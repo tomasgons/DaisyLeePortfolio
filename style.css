@@ -357,7 +357,8 @@ footer {
   }
   .headerimg p {
     top: 160px;
-    left: 80px;
+    left: 90px;
+    font-size: 100%;
   }
   .aboutcontent img {
     max-width: 60%;
