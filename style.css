@@ -1,7 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  cursor: pointer;
 }
 
 html {
@@ -12,7 +11,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  color: #7d2748;
+  color: whitesmoke;
   background-image: url(pics/walpaper2.jpg);
 }
 
@@ -187,15 +186,27 @@ li a:hover {
 
   text-align: center;
 }
-
-#headpieces {
-  text-align: center;
-
-  margin-top: 50px;
-}
-#headpieces img {
+#costuming img {
   justify-self: center;
   margin: 10px;
+}
+
+#headpieces {
+  margin-top: 50px;
+}
+
+.hatcontainer {
+  width: 100%;
+
+  margin: auto;
+  overflow: hidden;
+}
+.hatslide {
+  display: flex;
+  width: 100%;
+}
+.hatslide img {
+  max-width: 100%;
 }
 
 #repairs {
@@ -367,10 +378,26 @@ footer {
 @media screen and (min-width: 700px) {
   .headerimg p {
     position: absolute;
-    top: 18vw;
-    left: 15vw;
+    top: 21vw;
+    left: 13vw;
 
     font-size: 30px;
     font-weight: 900;
   }
+}
+
+.hatcontainer {
+  width: 42%;
+
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid black;
+}
+.hatslide {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+.hatslide img {
+  object-fit: contain;
 }
