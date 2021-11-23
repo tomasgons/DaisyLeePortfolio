@@ -213,6 +213,7 @@ li a:hover {
   max-width: 100%;
   height: auto;
   margin: 0px;
+  z-index: -1;
 }
 
 #repairs {
