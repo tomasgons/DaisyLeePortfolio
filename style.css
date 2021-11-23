@@ -320,6 +320,9 @@ li a:hover {
   align-items: center;
   color: rgba(247, 247, 247, 0.935);
 }
+#contact {
+  color: #fff659;
+}
 
 .aboutcontent img {
   max-width: 80%;
