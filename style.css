@@ -18,7 +18,6 @@ body {
 img {
   max-width: 80%;
   height: auto;
-  object-fit: contain;
 }
 
 header {
@@ -186,7 +185,7 @@ li a:hover {
 
   text-align: center;
 }
-#costuming img {
+#costumes img {
   justify-self: center;
   margin: 10px;
 }
@@ -194,19 +193,25 @@ li a:hover {
 #headpieces {
   margin-top: 50px;
 }
+#headpieces img {
+  justify-self: center;
+  margin: 10px;
+}
 
 .hatcontainer {
-  width: 100%;
+  width: 82%;
 
   margin: auto;
-  overflow: hidden;
+  overflow: scroll;
 }
 .hatslide {
   display: flex;
   width: 100%;
 }
-.hatslide img {
+.hatslide > img {
   max-width: 100%;
+  height: auto;
+  margin: 0px;
 }
 
 #repairs {
@@ -384,20 +389,19 @@ footer {
     font-size: 30px;
     font-weight: 900;
   }
-}
 
-.hatcontainer {
-  width: 42%;
+  .hatcontainer {
+    width: 30%;
+    padding: 0;
 
-  margin: auto;
-  overflow: hidden;
-  border: 1px solid black;
-}
-.hatslide {
-  display: flex;
-  width: 100%;
-  height: 500px;
-}
-.hatslide img {
-  object-fit: contain;
+    overflow: hidden;
+  }
+  .hatslide {
+    display: flex;
+    margin: 0;
+    width: 100%;
+  }
+  .hatslide img {
+    margin: 0;
+  }
 }
