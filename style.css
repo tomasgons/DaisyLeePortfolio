@@ -202,11 +202,12 @@ li a:hover {
   width: 82%;
 
   margin: auto;
-  overflow: scroll;
+  overflow: hidden;
 }
 .hatslide {
   display: flex;
   width: 100%;
+  height: 400px;
 }
 .hatslide > img {
   max-width: 100%;
@@ -395,6 +396,7 @@ footer {
     padding: 0;
 
     overflow: hidden;
+    border: none;
   }
   .hatslide {
     display: flex;
