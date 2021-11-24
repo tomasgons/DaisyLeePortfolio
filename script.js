@@ -42,7 +42,7 @@ nextBtn.addEventListener('click', () => {
     hatSlide.style.transition = 'transform 0.4s ease-in-out';
     counter++;
     hatSlide.style.transform = hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
-    console.log('check')
+
 });
 
 prevBtn.addEventListener('click', () => {
@@ -51,7 +51,7 @@ prevBtn.addEventListener('click', () => {
     hatSlide.style.transition = 'transform 0.4s ease-in-out';
     counter--;
     hatSlide.style.transform = hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
-    console.log('check')
+
 });
 
 hatSlide.addEventListener('transitionend', () => {

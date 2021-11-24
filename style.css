@@ -220,15 +220,15 @@ li a:hover {
 }
 #prevButton {
   position: absolute;
-  top: 50%;
-  left: 5%;
+
+  left: 38%;
 
   z-index: 100;
 }
 #nextButton {
   position: absolute;
-  top: 50%;
-  right: 5%;
+
+  right: 38%;
 
   z-index: 100;
 }
