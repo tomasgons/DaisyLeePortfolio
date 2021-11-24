@@ -37,6 +37,7 @@ const size = hatImages[0].clientWidth;
 hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
 
 nextBtn.addEventListener('click', () => {
+
     hatSlide.style.transition = 'transform 0.4s ease-in-out';
     counter++;
     hatSlide.style.transform = hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
@@ -44,6 +45,7 @@ nextBtn.addEventListener('click', () => {
 });
 
 prevBtn.addEventListener('click', () => {
+    if (counter <= 0) return;
     hatSlide.style.transition = 'transform 0.4s ease-in-out';
     counter--;
     hatSlide.style.transform = hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
