@@ -1,4 +1,5 @@
 const hatSlide = document.querySelector(".hatslide")
+const hatContainer = document.querySelector(".hatContainer")
 const hatImages = document.querySelectorAll(".hatslide img")
 const prevBtn = document.querySelector("#prevButton")
 const nextBtn = document.querySelector("#nextButton")
@@ -18,7 +19,7 @@ toggle.addEventListener("click", () => {
 
 
 wrapper.addEventListener("click", (e) =>
-    e.target !== nav ? nav.classList.add("nav-closed") : false
+    (e.target !== nav && e.target !== hatContainer) ? nav.classList.add("nav-closed") : false
 
 
 );
@@ -37,24 +38,28 @@ const size = hatImages[0].clientWidth;
 hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
 
 nextBtn.addEventListener('click', () => {
-    if (counter <= hatImages.length - 1) return;
+    console.log('nxt')
+    if (counter >= hatImages.length - 1) return;
 
     hatSlide.style.transition = 'transform 0.4s ease-in-out';
     counter++;
-    hatSlide.style.transform = hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
+    hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 });
 
 prevBtn.addEventListener('click', () => {
+    console.log('prev')
 
     if (counter <= 0) return;
     hatSlide.style.transition = 'transform 0.4s ease-in-out';
     counter--;
-    hatSlide.style.transform = hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
+    hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
 
 });
 
 hatSlide.addEventListener('transitionend', () => {
+
+
     if (hatImages[counter].id === 'lastClone') {
         hatSlide.style.transition = "none";
         counter = hatImages.length - 2
