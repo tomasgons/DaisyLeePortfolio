@@ -38,23 +38,24 @@ const size = hatImages[0].clientWidth;
 hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
 
 nextBtn.addEventListener('click', () => {
-    console.log('nxt')
+
     if (counter >= hatImages.length - 1) return;
 
     hatSlide.style.transition = 'transform 0.4s ease-in-out';
     counter++;
     hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    console.log('nxt')
 
 });
 
 prevBtn.addEventListener('click', () => {
-    console.log('prev')
+
 
     if (counter <= 0) return;
     hatSlide.style.transition = 'transform 0.4s ease-in-out';
     counter--;
     hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
-
+    console.log('prev')
 });
 
 hatSlide.addEventListener('transitionend', () => {
