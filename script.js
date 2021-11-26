@@ -1,14 +1,44 @@
-const hatSlide = document.querySelector(".hatslide")
-const hatContainer = document.querySelector(".hatContainer")
-const hatImages = document.querySelectorAll(".hatslide img")
-const prevBtn = document.querySelector("#prevButton")
-const nextBtn = document.querySelector("#nextButton")
+
 const toggle = document.querySelector(".toggle")
 const nav = document.querySelector("#nav")
 const wrapper = document.querySelector(".wrapper")
 const closeNav = document.querySelector("#close-nav")
 const links = document.querySelectorAll("nav li")
 
+
+const slides = document.querySelectorAll(".slide")
+
+const prev = document.querySelector("#prev")
+const next = document.querySelector("#next")
+const auto = false;
+const intervalTime = 5000;
+let slideInterval;
+
+
+const nextSlide = () => {
+    const current = document.querySelector('.current')
+    current.classList.remove('current')
+    if (current.nextElementSibling) {
+        current.nextElementSibling.classList.add('current')
+    } else {
+        slides[0].classList.add('current')
+    }
+    setTimeout(() => current.classList.remove('current'))
+}
+
+const prevSlide = () => {
+    const current = document.querySelector('.current')
+    current.classList.remove('current')
+    if (current.previousElementSibling) {
+        current.previousElementSibling.classList.add('current')
+    } else {
+        slides[slides.length - 1].classList.add('current')
+    }
+    setTimeout(() => current.classList.remove('current'))
+}
+
+next.addEventListener('click', nextSlide)
+prev.addEventListener('click', prevSlide)
 
 toggle.addEventListener("click", () => {
     nav.classList.toggle("nav-closed");
@@ -19,7 +49,7 @@ toggle.addEventListener("click", () => {
 
 
 wrapper.addEventListener("click", (e) =>
-    (e.target !== nav && e.target !== hatContainer) ? nav.classList.add("nav-closed") : false
+    (e.target !== nav) ? nav.classList.add("nav-closed") : false
 
 
 );
@@ -31,45 +61,3 @@ links.forEach((link) => {
 
 });
 
-// ImageSlide
-let counter = 1;
-const size = hatImages[0].clientWidth;
-
-hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
-
-nextBtn.addEventListener('click', () => {
-
-    if (counter >= hatImages.length - 1) return;
-
-    hatSlide.style.transition = 'transform 0.4s ease-in-out';
-    counter++;
-    hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    console.log('nxt')
-
-});
-
-prevBtn.addEventListener('click', () => {
-
-
-    if (counter <= 0) return;
-    hatSlide.style.transition = 'transform 0.4s ease-in-out';
-    counter--;
-    hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
-    console.log('prev')
-});
-
-hatSlide.addEventListener('transitionend', () => {
-
-
-    if (hatImages[counter].id === 'lastClone') {
-        hatSlide.style.transition = "none";
-        counter = hatImages.length - 2
-        hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
-    }
-    if (hatImages[counter].id === 'firstClone') {
-        hatSlide.style.transition = "none";
-        counter = hatImages.length - counter;
-        hatSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-
-    }
-});
