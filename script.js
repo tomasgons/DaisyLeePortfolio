@@ -4,9 +4,9 @@ const nav = document.querySelector("#nav")
 const wrapper = document.querySelector(".wrapper")
 const closeNav = document.querySelector("#close-nav")
 const links = document.querySelectorAll("nav li")
+const header = document.querySelector(".header")
 
-
-const slides = document.querySelectorAll(".slide")
+const slides = document.querySelectorAll(".mslide")
 
 const prev = document.querySelector("#prev")
 const next = document.querySelector("#next")

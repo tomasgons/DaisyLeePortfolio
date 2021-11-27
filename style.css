@@ -34,6 +34,7 @@ header {
 
 .headerimg {
   text-align: center;
+  position: relative;
 }
 .headerimg img {
   text-align: center;
@@ -42,8 +43,8 @@ header {
 
 .headerimg p {
   position: absolute;
-  top: 160px;
-  left: 70px;
+  top: 20px;
+  left: 3px;
   font-size: 90%;
   background: url(pics/walpaper2.jpg) -20px -20px no-repeat;
   -webkit-text-fill-color: transparent;
@@ -161,7 +162,7 @@ li a:hover {
   grid-template-columns: 1fr;
   grid-template-areas:
     "costuming "
-    "slidecontainer"
+    "mslidecontainer"
     "repairs "
     "events "
     "lessons "
@@ -202,21 +203,21 @@ li a:hover {
   margin: 10px;
 }
 
-.slidecontainer {
-  grid-area: slidecontainer;
+.mslidecontainer {
+  grid-area: mslidecontainer;
 
   margin-top: 100px;
   position: relative;
 }
 
-.slider {
+.mslider {
   overflow: hidden;
   height: 500px;
   width: 350px;
   text-align: center;
 }
 
-.slide {
+.mslide {
   position: absolute;
   top: 0;
   left: 0;
@@ -225,21 +226,21 @@ li a:hover {
   transition: opacity 0.4s ease-in-out;
   z-index: -1;
 }
-.slide img {
+.mslide img {
   margin: 50px auto;
 }
-.slide.current {
+.mslide.current {
   opacity: 1;
 }
 button#next {
   position: absolute;
   top: 50%;
-  right: 0px;
+  right: 5px;
 }
 button#prev {
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 5px;
 }
 .buttons button {
   font-size: 15px;
@@ -395,7 +396,7 @@ footer {
       "header header header"
       "navbar navbar navbar"
       "costuming costuming costuming"
-      "slidecontainer slidecontainer slidecontainer"
+      "mslidecontainer mslidecontainer mslidecontainer"
       "repairs repairs repairs"
       "events events events"
       "lessons lessons lessons"
@@ -414,8 +415,6 @@ footer {
     right: rem;
   }
   .headerimg p {
-    top: 160px;
-    left: 90px;
     font-size: 100%;
   }
   .aboutcontent img {
@@ -426,10 +425,16 @@ footer {
 @media screen and (min-width: 700px) {
   .headerimg p {
     position: absolute;
-    top: 21vw;
-    left: 13vw;
+    top: 5rem;
+    left: 2rem;
 
     font-size: 30px;
     font-weight: 900;
+  }
+  button#next {
+    right: 7rem;
+  }
+  button#prev {
+    left: 7rem;
   }
 }
