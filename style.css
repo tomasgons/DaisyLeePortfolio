@@ -369,15 +369,22 @@ button#prev {
 
 footer {
   grid-area: footer;
+
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+
   padding: 5px;
   width: 80%;
   margin-top: 70px;
   justify-self: center;
 
-  text-align: center;
+  text-align: left;
   background-color: rgba(110, 4, 4, 0.935);
 }
-
+footer .social i {
+  color: #fff659;
+}
 @media screen and (min-width: 500px) {
   img {
     max-width: 90%;
